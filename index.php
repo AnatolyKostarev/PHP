@@ -81,10 +81,17 @@
     $style_div = "style=";
     $bcg_div = "background-color: blue";
     $color_text_div = "color: red";
-    $width_div = "width:";
-    $height_div = "height:";
+    $width_div = "width: 100px";
+    $height_div = "height: 100px";
 
-    echo "<$tag_div  $style_div\"$bcg_div; $color_text_div; $width_div 100px; $height_div 100px;\">Hello</$tag_div>";
+    echo "$bcg_div <br>";
+    echo "$color_text_div  <br>";
+    echo "$width_div <br>";
+    echo "$height_div <br>";
+
+    echo "<br>";
+
+    echo "<$tag_div  $style_div\"$bcg_div; $color_text_div; $width_div; $height_div;\">Hello</$tag_div>";
 
 ?>
 </body>
