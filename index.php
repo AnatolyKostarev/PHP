@@ -25,7 +25,7 @@
     $a = 10;
     $b = 15;
     $rez = $a + $b;
-    $united_string = "'" . $a . "'" . " + " . "'" . $b . "'" . " = " . "'" . $rez . "'";
+    $united_string = "'a = {$a}' + 'b = {$b}' = 'rez = {$rez}'";
     echo "<h2>$united_string</h2>";
 
     echo "<br>";
