@@ -33,8 +33,9 @@
     print_r("<h1 style=\"text-decoration: underline; color: blue;\">Задача 4</h1>");
     $c = 10;
     $d = 15;
+    echo "<h2>Заданы переменные с = {$c}, d = {$d}</h2>";
     list($c, $d) = [$d, $c];
-    echo "<h2>$c, $d</h2>";
+    echo "<h2>После замены значений переменныx c = {$c}, d = {$d}</h2>";
 
     echo "<br>";
 
