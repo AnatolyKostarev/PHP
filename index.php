@@ -91,7 +91,7 @@
         $summStartArray = array_slice($summEndArray, 0, 20);
         array_shift($summEndArray);
 
-    for ($i = 0; $i < 20; $i++)
+    for ($i = 0; $i < $termOfDepositInYears; $i++)
     {
         echo "<tr style=\"color: white\"; align=\"center\" bgcolor=\"grey\">";
         echo "<td>" . ($i + 1) . "</td>";
