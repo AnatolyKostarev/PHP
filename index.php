@@ -35,7 +35,8 @@
             img {
                 width: 248px;
                 height: 154px;
-            }</style>";
+            }
+          </style>";
     foreach($images as $image)
     {
         echo "<img src='".$path.htmlspecialchars(urlencode($image))."' alt='".$image."' />";
