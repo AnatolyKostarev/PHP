@@ -86,18 +86,18 @@
 
     for ($i = 0; $i <= $termOfDepositInYears; $i++)
     {
-        $deposit[$i] = round(((1 + $interestRate)**$i) * $InitialDeposit, 2);
+        $summEndArray[$i] = round(((1 + $interestRate)**$i) * $InitialDeposit, 2);
     }
-        $summStartArray = array_slice($deposit, 0, 20);
-        $assistDeposit = array_shift($deposit);
+        $summStartArray = array_slice($summEndArray, 0, 20);
+        array_shift($summEndArray);
 
     for ($i = 0; $i < 20; $i++)
     {
         echo "<tr style=\"color: white\"; align=\"center\" bgcolor=\"grey\">";
         echo "<td>" . ($i + 1) . "</td>";
         echo "<td>$summStartArray[$i]</td>";
-        echo "<td>$deposit[$i]</td>";
-        echo "<td>" . ($deposit[$i] - $summStartArray[$i]) . "</td";
+        echo "<td>$summEndArray[$i]</td>";
+        echo "<td>" . ($summEndArray[$i] - $summStartArray[$i]) . "</td";
         echo "</tr>";
     }
     echo "</table>";
