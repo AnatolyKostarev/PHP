@@ -67,9 +67,39 @@
          сумму и прибыль за каждый год.*/
     echo "<br>";
     echo "<h1>Задача 4</h1>";
+    ?>
+   
+    <?php
 
+    $interestRate = 0.2;
+    $termOfDepositInYears = 20;
+    $InitialDeposit = 300;
 
+    echo "<table>
+    <tr align=\"center\" bgcolor=\"red\">
+            <td width=\"100px\">Year</td>
+            <td width=\"200px\">Start Summ</td>
+            <td width=\"200px\">Summ End</td>
+            <td width=\"200px\">Profit</td>
+        </tr>";
 
+    for ($i = 0; $i <= $termOfDepositInYears; $i++)
+    {
+        $deposit[$i] = round(((1 + $interestRate)**$i) * $InitialDeposit, 2);
+    }
+        $summStartArray = array_slice($deposit, 0, 20);
+        $assistDeposit = array_shift($deposit);
+        
+    for ($i = 0; $i < 20; $i++)
+    {
+        echo "<tr style=\"color: white\"; align=\"center\" bgcolor=\"grey\">";
+        echo "<td>" . ($i + 1) . "</td>";
+        echo "<td>$summStartArray[$i]</td>";
+        echo "<td>$deposit[$i]</td>";
+        echo "<td>" . ($deposit[$i] - $summStartArray[$i]) . "</td";
+        echo "</tr>";
+    }
+    echo "</table>";
 
     ?>
 
