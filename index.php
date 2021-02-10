@@ -56,8 +56,8 @@
             echo "<tr><td align=\"right\">$i * $k = " . $i * $k . "</td></tr>";
         }
       }
-      echo "</tbody>";
-      echo "</table>";
+    echo "</tbody>";
+    echo "</table>";
     ?>
 
     <?php
@@ -89,7 +89,7 @@
     }
         $summStartArray = array_slice($deposit, 0, 20);
         $assistDeposit = array_shift($deposit);
-        
+
     for ($i = 0; $i < 20; $i++)
     {
         echo "<tr style=\"color: white\"; align=\"center\" bgcolor=\"grey\">";
