@@ -53,8 +53,7 @@
     echo "<br>";
     echo "<h2>Задача 2</h2><br>";
     echo "<p style=\"text-align: justify; font-size: 18px; width: 50%;\">Разработать функцию вывода HTML-элемента, которая на входе принимает название тега и класс стилей
-    и строит на странице соответствующий элемент.
-    </p><br>";
+    и строит на странице соответствующий элемент.</p><br>";
 
     function showHTML($tegName, $classTegName, $elementContent)
     {
@@ -65,13 +64,57 @@
 
     showHTML('h3', 'headTitle', 'Hello, World!');
 
+    echo "<br>";
+    echo "<h2>Задача 3</h2><br>";
+    echo "<p style=\"text-align: justify; font-size: 18px; width: 50%;\">Разработать функцию, которая строит блок меню.
+    На входе функция получает массив пунктов меню.
+    Пункт меню состоит из текста, который будет внутри,
+    и названия класса для стилей.</p><br>";
 
 
+    function navBar($array, $classNameTeg)
+    {
+        echo "<style> 
+            .$classNameTeg {
+                display: inline-flex;
+                color: yellow; 
+                padding: 30px; 
+                background-color: green;
+                transition: 0.5s;
+            }
+            .$classNameTeg:hover {
+                color: green;
+                background-color: yellow;
+                transition: 0.5s;
+            }
+            a {
+                text-decoration: none;
+            }
+            </style>";
+        echo "<ul style=\"list-style: none; padding: 0;\">";
+        for ($i = 0; $i < count($array); $i++)
+        {
+            echo "<a href=\"#\"><li class=\"$classNameTeg\">" . $array[$i] . "</li></a>";
+        }
+        echo "</ul>";
+    }
 
+    $array = ['Home', 'About', 'Contacts', 'Photo', 'Blog'];
 
+    navBar($array, 'item');
 
+    echo "<br>";
+    echo "<h2>Задача 4</h2><br>";
+    echo "<p style=\"text-align: justify; font-size: 18px; width: 50%;\">Разработать функцию генерации случайного цвета,
+    которая возвращает случайный цвет в HEX-формате, вывести на страницу DIV, зарисованный цветом,
+    который вернет функция.</p><br>";
 
+    function rand_color() {
+        return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+    }
 
+    $color = rand_color();
+    echo "<div style=\"background-color: $color; width: 70px; height: 70px\"></div";
 
 
 
