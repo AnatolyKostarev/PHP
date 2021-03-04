@@ -109,21 +109,63 @@
     которая возвращает случайный цвет в HEX-формате, вывести на страницу DIV, зарисованный цветом,
     который вернет функция.</p><br>";
 
-    function rand_color() {
+    function rand_color() 
+    {
         return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
     }
 
     $color = rand_color();
-    echo "<div style=\"background-color: $color; width: 70px; height: 70px\"></div";
+
+    echo "<div style=\"background-color: $color; width: 70px; height: 70px\"></div>";
+
+
+    echo "<br>";
+    echo "<h2>Задача 5</h2><br>";
+    echo "<p style=\"text-align: justify; font-size: 18px; width: 50%;\">Разработать функцию вывода шахматной фигуры
+    на доске, которая на входе принимает номер строки,
+    номер столбца и название фигуры.
+    </p><br>";
+
+?>
+
+<table border='0' id="chessBoard">
+<?php   
+
+    $table = '';
+    $width  = 8;
+    $height = 8;
+
+    for ($i = 1; $i <= $width ; $i++) { 
+
+        $table .= '<tr>';
+
+        for ($j = 1; $j <= $height ; $j++) { 
+            $color = ($i + $j) % 2 ? 'black' : 'white';
+            $table .= "<td bgcolor='{$color}' width='50' height='50'></td>"; 
+        }
+    
+        $table .= '</tr>';
+       
+    }
+
+    echo $table;
+?>
+ </table>
 
 
 
 
 
 
+    <div style="width: 40px; height: 40px; margin: 0; padding: 0; position: absolute; top: 1926px; left: 8px;">
+        <img src="img/black_figure.png" style="width: 40px; height: 40px; padding: 0; margin: 0;" alt="">
+    </div>
 
+    <div style="width: 40px; height: 40px; margin: 0; padding: 0; position: absolute; top: 1926px; left: 168px;">
+        <img src="img/white_figure.png" style="width: 40px; height: 40px; padding: 0; margin: 0;" alt="">
+    </div>
 
+    
 
-    ?>
 </body>
 </html>
