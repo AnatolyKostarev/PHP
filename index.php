@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task_8</title>
 </head>
-<body>
+<body style="margin: 0;">
     <?php
 
     echo "<h1>Домашнее задание 8</h1><br>";
