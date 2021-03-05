@@ -164,7 +164,6 @@
     <div style="width: 40px; height: 40px; margin: 0; padding: 0; position: absolute; top: 1926px; left: 168px;">
         <img src="img/white_figure.png" style="width: 40px; height: 40px; padding: 0; margin: 0;" alt="">
     </div>
-
     
 
 </body>
